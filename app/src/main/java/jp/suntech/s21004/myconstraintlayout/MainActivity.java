@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             switch (view.getId()) {
                 case R.id.btConfirm:
                     if (msg == null) {
-                        Toast.makeText(MainActivity.this, "未入力の欄があります", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "未入力の欄があります", Toast.LENGTH_SHORT).show();
                         break;
                     }
                     // ダイアログ表示
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
                 case R.id.btSend:
                     if (msg == null) {
-                        Toast.makeText(MainActivity.this, "未入力の欄があります", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "未入力の欄があります", Toast.LENGTH_SHORT).show();
                         break;
                     }
                     // トースト表示

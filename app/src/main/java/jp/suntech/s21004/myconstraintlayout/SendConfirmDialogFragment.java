@@ -33,9 +33,16 @@ public class SendConfirmDialogFragment extends DialogFragment {
     private class DialogButtonClickListener implements DialogInterface.OnClickListener {
         @Override
         public void onClick(DialogInterface dialog, int which) {
-            // OKがタップされたらトーストを表示
-            if (which == DialogInterface.BUTTON_POSITIVE) {
-                Toast.makeText(getActivity(), toastText, Toast.LENGTH_LONG).show();
+            switch (which) {
+                case DialogInterface.BUTTON_POSITIVE:
+                    // 確定がタップされたら送信内容を記述したトーストを表示
+                    Toast.makeText(getActivity(), toastText, Toast.LENGTH_LONG).show();
+                    break;
+
+                case DialogInterface.BUTTON_NEGATIVE:
+                    // キャンセルがタップされたらキャンセルメッセージを記述したトーストを表示
+                    Toast.makeText(getActivity(), "送信がキャンセルされました。", Toast.LENGTH_SHORT).show();
+                    break;
             }
         }
     }
